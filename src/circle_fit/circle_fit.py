@@ -552,7 +552,7 @@ def standardLSQ(coords: Union[np.ndarray, List]) -> Tuple[float, ...]:
     return xc, yc, r, s
 
 
-def plot_data_circle(coords: Union[npt.NDArray, List], xc: float, yc: float, r: float) -> None:
+def plot_data_circle(coords: Union[npt.NDArray, List], xc: float, yc: float, r: float, title: str = 'Fit Circle') -> None:
     """
     Plot data and a fitted circle.
 
@@ -562,6 +562,7 @@ def plot_data_circle(coords: Union[npt.NDArray, List], xc: float, yc: float, r: 
     xc  : float. x coordinate of the circle fit
     yc  : float. y coordinate of the circle fit
     r   : float. Radius of the circle fit
+    title: string. Name of the plot title
 
     Returns
     -------
@@ -587,5 +588,5 @@ def plot_data_circle(coords: Union[npt.NDArray, List], xc: float, yc: float, r: 
 
     plt.legend(loc='best', labelspacing=0.1)
     plt.grid()
-    plt.title('Fit Circle')
+    plt.title(title)
     plt.show()
